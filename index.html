@@ -37,7 +37,7 @@ table.dataTable td {
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <table summary="This table shows how to create responsive tables using Datatables' extended functionality" class="table table-bordered table-hover dt-responsive">
+      <table id="myTable" summary="This table shows how to create responsive tables using Datatables' extended functionality" class="table table-bordered table-hover dt-responsive">
         <caption class="text-center">An example of a responsive table based on <a href="https://datatables.net/extensions/responsive/" target="_blank">DataTables</a>:</caption>
         <thead>
           <tr>
@@ -104,8 +104,9 @@ table.dataTable td {
 
 <script>
 
-document.getElementById("table").DataTable();
-
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
 </script>
 
 </body>
