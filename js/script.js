@@ -1,1 +1,1 @@
-// Write JavaScript here 
+$('table').DataTable();
