@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>HTML, CSS and JavaScript demo</title>
+    <style> 
+body { 
+  font-size: 140%; 
+}
+
+h2 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+table caption {
+    padding: .5em 0;
+}
+
+table.dataTable th,
+table.dataTable td {
+  white-space: nowrap;
+}
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
+</style>
+<title>ImageTagger</title>
 <link type="text/css" rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
@@ -77,33 +102,9 @@
 
 <script>
 
-$('table').DataTable();
+document.getElementById("table").DataTable();
 
 </script>
-<style> 
-body { 
-  font-size: 140%; 
-}
 
-h2 {
-  text-align: center;
-  padding: 20px 0;
-}
-
-table caption {
-    padding: .5em 0;
-}
-
-table.dataTable th,
-table.dataTable td {
-  white-space: nowrap;
-}
-
-.p {
-  text-align: center;
-  padding-top: 140px;
-  font-size: 14px;
-}
-</style>
 </body>
 </html>
