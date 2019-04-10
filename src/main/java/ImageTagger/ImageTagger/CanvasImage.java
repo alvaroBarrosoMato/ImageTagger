@@ -130,10 +130,15 @@ public class CanvasImage {
 	    }
 	   //Usado para crear conjuentos etiquetados de Object Detection mediante Salesforce Einstein Vision.
 	   public String finish() {
-		   for (int i = index; i<7; i++) {
-			   str += ",";
+		   if(index == 0) {
+			   
+		   }else {
+			   for (int i = index; i<7; i++) {
+				   str += ",";
 
+			   } 
 		   }
+		   
 		   //System.out.println(str);
 		   str += "@";
 		   return str;

@@ -135,7 +135,7 @@ public class GameFrame {
 		//if()
 		
 	}
-	public void draw(Graphics g) {
+	public void draw(Graphics g, boolean arcade) {
 		g.setColor(Color.DARK_GRAY);
 		g.fillRect(0, 0, DEFAULT_WIDTH, DEFAULT_HEIGHT);
 		//System.out.println("acsackla");
@@ -154,14 +154,14 @@ public class GameFrame {
 		g.drawRect(Optic.xPos, Optic.yPos, Optic.getImageWidth(), Optic.getImageHeight());
 
 		//Screen Cover 
-		if(o.scopeBlock) {
+		if(o.scopeBlock&&arcade) {
 			g.setColor(Color.lightGray);
 			
 			//Estructura dividida en cuatro rectangulos alrededor de el rectangulo original.
 			
-			g.fillRect(Optic.xPos, 0, this.DEFAULT_WIDTH, Optic.yPos);
+			g.fillRect(Optic.xPos, 0, this.DEFAULT_WIDTH + Optic.getImageWidth(), Optic.yPos);
 			
-			g.fillRect(Optic.xPos + Optic.getImageWidth(), Optic.yPos, this.DEFAULT_WIDTH, this.DEFAULT_HEIGHT);
+			g.fillRect(Optic.xPos + Optic.getImageWidth(), Optic.yPos, this.DEFAULT_WIDTH, this.DEFAULT_HEIGHT + Optic.getImageHeight());
 			
 			g.fillRect(0, Optic.yPos + Optic.getImageHeight(), Optic.xPos + Optic.getImageWidth(), this.DEFAULT_HEIGHT);
 			
@@ -172,7 +172,7 @@ public class GameFrame {
 			
 
 		}
-		if(o.disparosB) {
+		if(o.disparosB&&arcade) {
 			int yPos = 0;
 				if(timer != null) {
 					 yPos = DEFAULT_HEIGHT - shot.getImageHeight() - timer.height - 20;

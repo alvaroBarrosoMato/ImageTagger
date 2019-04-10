@@ -588,7 +588,7 @@ public class Controller implements Runnable {
 				if(gameFrame == null) {
 					initGameFrame();
 				}
-				gameFrame.draw(graphics);
+				gameFrame.draw(graphics, arcade);
 			}else if(currentScreen.equals(ENDGAME)){
 				if(endScreen == null) {
 					endScreen = new EndScreen(DEFAULT_WIDTH, DEFAULT_HEIGHT);

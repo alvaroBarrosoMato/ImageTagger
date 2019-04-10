@@ -70,8 +70,14 @@ public class Ranking {
 			
 			g.setColor(Color.black); 
 			g.setFont(new Font("TimesRoman", Font.PLAIN, 40));
+
+			g.drawString("Name", 50, 50 * (2));
+			g.drawString("Points", 300,50 * (2));
+			g.drawString("Cuts", 550, 50 * (2));
+			g.drawString("Date", 800,50 * (2));
 			
 			if(hs.highScores.size()>0) {
+				
 				for(int i = 0; i < hs.highScores.size(); i++) {
 					HighScore h = hs.highScores.get(i);
 					g.drawString(h.name, 50, 50 * (i+3));
